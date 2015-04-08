@@ -48,7 +48,8 @@ if __name__ == "__main__":
         # Create a new session. A session is the 'root' object for all other
         # RADICAL-Pilot objects. It encapsulates the MongoDB connection(s) as
         # well as security contexts.
-        DBURL = "mongodb://ec2-54-221-194-147.compute-1.amazonaws.com:24242"
+	# Add your mongodb URL here
+	DBURL = "mongodb://addyoururlhere!!!!!"
         session = rp.Session(database_url = DBURL)
 
         # ----- CHANGE THIS -- CHANGE THIS -- CHANGE THIS -- CHANGE THIS ------
@@ -58,8 +59,8 @@ if __name__ == "__main__":
         # on your local machine. 
         #
         c = rp.Context('ssh')
-        c.user_id = "georgeha"
-        c.user_pass = "giwrgos@Futuregrid1"
+        c.user_id = "username"
+        c.user_pass = "password"
         session.add_context(c)
 
         # Add a Pilot Manager. Pilot managers manage one or more ComputePilots.
@@ -85,7 +86,7 @@ if __name__ == "__main__":
         # 
         # define the resources you need
         pdesc = rp.ComputePilotDescription()
-        pdesc.resource = "futuregrid.india"  # NOTE: This is a "label", not a hostname
+        pdesc.resource = "localhost.localhost"  # NOTE: This is a "label", not a hostname
         pdesc.runtime  = 10 # minutes
         pdesc.cores    = 4
         pdesc.cleanup  = True
