@@ -63,7 +63,7 @@ source $HOME/myenv/bin/activate
 <h3> Download the mpk-k-means  via command line: </h3>
 
 ```
-curl -LOk https://github.com/georgeha/k-means-map-reduce/archive/master.zip | tar -xf master.zip | 
+curl -LOk https://github.com/georgeha/k-means-map-reduce/archive/master.zip 
 ```
 
 Unzip:
@@ -71,6 +71,12 @@ Unzip:
 ```
 tar -xf master.zip
 ```
+
+move to the working directory:
+
+```
+cd k-means-map-reduce-master/
+``` 
 
 <h3> RUN! </h3>
 
